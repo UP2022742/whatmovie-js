@@ -1,0 +1,49 @@
+#background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+.middle {
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 25px;
+}
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+@media only screen and (max-width: 1200px) {
+    .middle {
+        width: 60%;
+
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .middle {
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .middle {
+        width: 100%;
+        border-radius: 0px;
+        border-left: none;
+        border-right: none;
+    }
+  }

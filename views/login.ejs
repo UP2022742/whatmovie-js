@@ -1,23 +1,32 @@
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="css/login.css">
-  </head>
-  <body>
-    <h1>Login</h1>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+  <link rel="stylesheet" href="../public/css/login.css">
+</head>
+
+<body class="main">
+  <video autoplay muted loop id="background">
+    <source src="../public/videos/background.mp4" type="video/mp4">
+  </video>
+  <div class="middle">
+    <h1 style="font-size: 60px;">Login</h1>
     <% if (messages.error) { %>
-      <%= messages.error %>
+    <%= messages.error %>
     <% } %>
     <form action="/login" method="POST">
       <div>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+        <label for="email">Email</label><br>
+        <input style="width: 100%; height: 40px; font-size: 30px;" type="email" id="email" name="email" required>
       </div>
       <div>
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
+        <label for="password">Password</label><br>
+        <input style="width: 100%; height: 40px; font-size: 30px;" type="password" id="password" name="password" required>
       </div>
+      <a class="button" href="/register">Register</a>
       <button type="submit">Login</button>
     </form>
-    <a href="/register">Register</a>
-  </body>
+  </div>
+</body>
+
 </html>

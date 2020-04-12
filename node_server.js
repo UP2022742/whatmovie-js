@@ -20,6 +20,7 @@ id => users.find(user => user.id === id)
 const users = []
 const listening_port = 8080
 
+app.use("/public",express.static(__dirname + "/public"));
 app.set('view-engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
 app.use(flash())
